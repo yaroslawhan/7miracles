@@ -174,5 +174,10 @@
 	$(".slider-container").on('changeSlide.ikSlider', function (evt) { console.log(evt.currentSlide); });
 
 	</script>
+	<script>
+		if ('serviceWorker' in navigator){
+			navigator.serviceWorker.register('/sw.js', {scope: '/'});
+		}
+	</script>
 </body>
 </html>
